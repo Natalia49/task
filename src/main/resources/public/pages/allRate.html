@@ -1,0 +1,14 @@
+<table class="table table-bordered table-striped" ng-init="getRates()">
+    <h3>Return the title of the movie, user name and rating for every rating.
+    </h3>
+    <tr>
+        <th>Movie title</th>
+        <th>User name</th>
+        <th>Rating</th>
+    </tr>
+    <tr  ng-model="rate" ng-repeat="rate in rates">
+        <td>{{rate.movieName}}</td>
+        <td>{{rate.userName}}</td>
+        <td>{{rate.rate}}</td>
+    </tr>
+</table>

@@ -1,0 +1,30 @@
+<div >
+    <h3>Insert the following movies into the Movie table. Delete the movies you added in task 2.
+        Return all movies</h3>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Title" ng-model="title">
+</div>
+    <div class="form-group">
+    <input type="text" class="form-control" placeholder="Director" ng-model="director">
+    </div>
+    <div class="form-group">
+    <button type="submit" class="btn btn-success" ng-click="insertMovie()" ng-disabled="!title">Add</button>
+</div>
+<table class="table table-bordered table-striped" ng-init="getMovies()">
+    <h3>Movies
+    </h3>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Director</th>
+        <th>Delete movie</th>
+
+    </tr>
+    <tr  ng-model="movies" ng-repeat="movie in movies">
+        <td>{{movie.id}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.director}}</td>
+        <td><button type="submit" class="btn btn-success" ng-click="deleteMovie(movie)">Delete</button></td>
+    </tr>
+</table>
+</div>

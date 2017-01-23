@@ -1,0 +1,20 @@
+<table class="table table-bordered table-striped" ng-init="changeDates()">
+    <h3>Some date in rating is lost. Find the userId of all users who have ratings with a NULL
+        value for the date. Set it to today's date in database.
+        Return all ratings.
+    </h3>
+    <tr>
+        <th>Id</th>
+        <th>Movie id</th>
+        <th>User id</th>
+        <th>Rating</th>
+        <th>Date</th>
+    </tr>
+    <tr  ng-model="ratings" ng-repeat="rating in ratings">
+        <td>{{rating.id}}</td>
+        <td>{{rating.movie.id}}</td>
+        <td>{{rating.user.id}}</td>
+        <td>{{rating.rating}}</td>
+        <td>{{rating.date| date:'yyyy-MM-dd'}}</td>
+    </tr>
+</table>

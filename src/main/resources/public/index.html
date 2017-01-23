@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="task">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tasks</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+<body ng-controller="taskController">
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">Sombra Tasks</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="all">Task 0</a></li>
+        <li><a ui-sref="rating">Task 1</a></li>
+        <li><a ui-sref="movies">Task 2 and 5</a></li>
+        <li><a ui-sref="movieByRate">Task 3</a></li>
+        <li><a ui-sref="movieWithoutRate">Task 4</a></li>
+        <li><a ui-sref="allRate">Task 6</a></li>
+    </ul>
+    <form class="navbar-form navbar-right">
+    </form>
+</nav>
+
+<div class="container">
+    <div ui-view></div>
+</div>
+
+<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
+<script src="js/taskController.js"></script>
+
+</body>
+</html>

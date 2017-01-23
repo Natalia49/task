@@ -1,0 +1,12 @@
+<table class="table table-bordered table-striped" ng-init="findWithoutRate()">
+    <h3>Return the titles of all movies that have no ratings.
+    </h3>
+    <tr>
+        <th>Title</th>
+        <th>Director</th>
+    </tr>
+    <tr  ng-model="movies" ng-repeat="movie in movies">
+        <td>{{movie.title}}</td>
+        <td>{{movie.director}}</td>
+    </tr>
+</table>

@@ -1,0 +1,24 @@
+<h3>Return the movieID, ratingDate of all movies that received a rating of 4 or 5, and sort
+    them in increasing order by ratingDate.</h3>
+</div>
+<div class="form-group">
+<input type="number" class="form-control" min="1" max="5" ng-model="first" placeholder="More than ...">
+</div>
+<div class="form-group">
+<input type="number" class="form-control" min="1" max="5" ng-model="second" placeholder="Less than ...">
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-success" ng-click="findMovieByRate()" ng-disabled="!first||!second">Find</button>
+</div>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Movie id</th>
+        <th>Rating</th>
+        <th>Date</th>
+    </tr>
+    <tr  ng-model="ratings" ng-repeat="rating in ratings">
+        <td>{{rating.movie.id}}</td>
+        <td>{{rating.rating}}</td>
+        <td>{{rating.date| date:'yyyy-MM-dd'}}</td>
+    </tr>
+</table>

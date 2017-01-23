@@ -17,8 +17,7 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<Movie> findAll() {
-        List<Movie> users = movieDao.findAll();
-        return users;
+        return movieDao.findAll();
     }
     @Override
     public List<Movie> saveMovie(String title, String director) {
@@ -27,8 +26,7 @@ public class MovieServiceImpl implements MovieService {
     }
     @Override
     public List<Movie> findMovieWithoutRating() {
-        List<Movie> movies = movieDao.findMoviesWithoutRating();
-        return movies;
+        return movieDao.findMoviesWithoutRating();
     }
     @Override
     public List<Movie> deleteMovieById(Long id) {

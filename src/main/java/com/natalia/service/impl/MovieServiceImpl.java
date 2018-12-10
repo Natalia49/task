@@ -34,4 +34,9 @@ public class MovieServiceImpl implements MovieService {
         return findAll();
     }
 
+    @Override
+    public void updateMovie(Movie movie) {
+        movieDao.update(movie);
+    }
+
 }

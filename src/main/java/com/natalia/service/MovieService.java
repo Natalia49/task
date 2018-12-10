@@ -13,4 +13,6 @@ public interface MovieService {
     List<Movie> findMovieWithoutRating();
 
     List<Movie> deleteMovieById(Long id);
+
+    void updateMovie(Movie movie);
 }
